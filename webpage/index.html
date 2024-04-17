@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReactJS Full Page Layout</title>
+  <!-- ReactJS CDN links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    // Navbar component
+    const Navbar = () => {
+      return (
+        React.createElement('nav', { style: { backgroundColor: '#333', padding: '10px', color: 'white' } },
+          React.createElement('ul', { style: { listStyle: 'none', margin: 0, padding: 0 } },
+            React.createElement('li', { style: { display: 'inline-block', marginRight: '10px' } }, 'Home'),
+            React.createElement('li', { style: { display: 'inline-block', marginRight: '10px' } }, 'About'),
+            React.createElement('li', { style: { display: 'inline-block', marginRight: '10px' } }, 'Contact')
+          )
+        )
+      );
+    };
+
+    // Content component
+    const Content = () => {
+      return (
+        React.createElement('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px' } },
+          React.createElement('div', { style: { flex: 1 } },
+            React.createElement('h2', null, 'Welcome to our Website'),
+            React.createElement('p', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+          ),
+          React.createElement('div', { style: { flex: 1, textAlign: 'right' } },
+            React.createElement('img', { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcBiBI248rgjtRfFgxc8WapC-w7npSGPi6GnV1_VUMww&s', alt: 'Placeholder Image', style: { maxWidth: '100%', height: 'auto' } })
+          )
+        )
+      );
+    };
+
+    // Footer component
+    const Footer = () => {
+      return (
+        React.createElement('footer', { style: { backgroundColor: '#333', color: 'white', textAlign: 'center', padding: '20px' } },
+          React.createElement('p', null, '© 2024 ReactJS Website. All rights reserved.')
+        )
+      );
+    };
+
+    // Render the full page layout
+    ReactDOM.render(
+      React.createElement('div', null,
+        React.createElement(Navbar),
+        React.createElement(Content),
+        React.createElement(Footer)
+      ),
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>
