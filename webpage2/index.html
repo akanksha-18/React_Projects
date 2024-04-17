@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReactJS Components</title>
+  <!-- ReactJS CDN links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    // MainHeading component
+    const MainHeading = () => {
+      return React.createElement('h1', { style: { textAlign: 'center', marginTop: '20px', color: '#1E90FF' } }, 'Welcome to Our Website');
+    };
+
+    // FirstDiv component
+    const FirstDiv = () => {
+      return React.createElement('div', { style: { maxWidth: '600px', margin: '0 auto', padding: '20px', backgroundColor: '#FFD700' } },
+        React.createElement('p', { style: { color: '#333' } }, 'This paragraph contains important information about our company. Please read it carefully.')
+      );
+    };
+
+    // SecondDiv component
+    const SecondDiv = () => {
+      return React.createElement('div', { style: { maxWidth: '600px', margin: '20px auto', padding: '20px', backgroundColor: '#32CD32' } },
+        React.createElement('p', { style: { color: '#333' } }, 'For more information, visit our ',
+          React.createElement('a', { href: 'https://example.com', style: { color: '#1E90FF', textDecoration: 'underline' } }, 'website'),
+          '.')
+      );
+    };
+
+    // LastDiv component
+    const LastDiv = () => {
+      return React.createElement('div', { style: { maxWidth: '600px', margin: '20px auto', padding: '20px', backgroundColor: '#FF6347' } },
+        React.createElement('p', { style: { color: '#333' } }, 'Contact us at support@example.com for any inquiries or assistance.')
+      );
+    };
+
+    // App component
+    const App = () => {
+      return React.createElement('div', null,
+        React.createElement(MainHeading),
+        React.createElement(FirstDiv),
+        React.createElement(SecondDiv),
+        React.createElement(LastDiv)
+      );
+    };
+
+    // Render the App component
+    ReactDOM.render(
+      React.createElement(App),
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>
