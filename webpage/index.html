@@ -26,19 +26,36 @@
     };
 
     // Content component
-    const Content = () => {
-      return (
-        React.createElement('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px' } },
-          React.createElement('div', { style: { flex: 1 } },
-            React.createElement('h2', null, 'Welcome to our Website'),
-            React.createElement('p', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-          ),
-          React.createElement('div', { style: { flex: 1, textAlign: 'right' } },
-            React.createElement('img', { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcBiBI248rgjtRfFgxc8WapC-w7npSGPi6GnV1_VUMww&s', alt: 'Placeholder Image', style: { maxWidth: '100%', height: 'auto' } })
-          )
+   const Content = () => {
+  // State to track if the paragraph is visible or not
+  const [showParagraph, setShowParagraph] = React.useState(false);
+
+  // Function to toggle the visibility of the paragraph
+  const toggleParagraph = () => {
+    setShowParagraph(!showParagraph);
+  };
+
+  return (
+    React.createElement('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' } },
+      // Getting Started section
+      React.createElement('section', { id: 'getting-started', style: { marginBottom: '20px', textAlign: 'center' } },
+        React.createElement('h2', null, 'Getting Started'),
+        React.createElement('button', { onClick: toggleParagraph }, 'Show Getting Started Guide'),
+        showParagraph && React.createElement('p', null, 'Welcome to ReactJS! If you\'re new to React, here\'s how you can get started with building your first app.')
+      ),
+      // Main content
+      React.createElement('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' } },
+        React.createElement('div', { style: { flex: 1 } },
+          React.createElement('h2', null, 'Welcome to our Website'),
+          React.createElement('p', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        ),
+        React.createElement('div', { style: { flex: 1, textAlign: 'right' } },
+          React.createElement('img', { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcBiBI248rgjtRfFgxc8WapC-w7npSGPi6GnV1_VUMww&s', alt: 'Placeholder Image', style: { maxWidth: '100%', height: 'auto' } })
         )
-      );
-    };
+      )
+    )
+  );
+};
 
     // Footer component
     const Footer = () => {
