@@ -1,0 +1,90 @@
+/* .container {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+
+  }
+  
+  .image {
+    width: 50%; 
+    height: 400px;
+    padding-left: 5%;
+  }
+  
+  .text {
+    width: 50%; 
+    padding: 0 20px; 
+    padding-right: 10%;
+    line-height: 1.6; 
+  }
+  .button{
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #3b9bac;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+   */
+   .container {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+  }
+  
+  .image {
+    width: 50%;
+    height: 400px;
+    padding-left: 5%;
+  }
+  
+  .text {
+    width: 50%;
+    padding: 0 20px;
+    padding-right: 10%;
+    line-height: 1.6;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #3b9bac;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: stretch; /* Stretch children to full width */
+    }
+  
+    .image {
+      width: 100%;
+      height: auto;
+      padding-left: 0;
+      margin-bottom: 20px; /* Add some spacing between image and text on small screens */
+    }
+  
+    .text {
+      width: 90%;
+      padding: 0 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .button {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px; /* Add some spacing between button and text on small screens */
+    }
+  }
+  
