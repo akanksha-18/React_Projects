@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReactJS</title>
+  <title>ReactJS Website</title>
   <!-- ReactJS CDN links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
@@ -27,65 +27,35 @@
 
     // Content component
     const Content = () => {
-  // State to track if the paragraph is visible or not
-  const [showParagraph, setShowParagraph] = React.useState(false);
-   const Content = () => {
-  // State to track if the paragraph is visible or not
-  const [showParagraph, setShowParagraph] = React.useState(false);
+      return (
+        React.createElement('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' } },
+          // Main heading
+          React.createElement('h1', null, 'Welcome to ReactJS Website'),
+          
+          // Getting Started section
+          React.createElement('section', { style: { marginBottom: '20px', textAlign: 'center' } },
+            React.createElement('h2', null, 'Getting Started'),
+            React.createElement('a', { href: '#getting-started' }, 'Learn More'),
+            React.createElement('p', null, 'Welcome to ReactJS! If you\'re new to React, here\'s how you can get started with building your first app.')
+          ),
+          
+          // HTML - Structuring the Web section
+          React.createElement('section', { style: { marginBottom: '20px', textAlign: 'center' } },
+            React.createElement('h2', null, 'HTML - Structuring the Web'),
+            React.createElement('a', { href: '#html-structure' }, 'Learn More'),
+            React.createElement('p', null, 'HTML is the backbone of web development. It provides the structure for your web pages, defining elements like headings, paragraphs, and lists.')
+          ),
 
-  // Function to toggle the visibility of the paragraph
-  const toggleParagraph = () => {
-    setShowParagraph(!showParagraph);
-  };
-
-  return (
-    React.createElement('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' } },
-      // Getting Started section
-      React.createElement('section', { id: 'getting-started', style: { marginBottom: '20px', textAlign: 'center' } },
-        React.createElement('h2', null, 'Getting Started'),
-        React.createElement('button', { onClick: toggleParagraph }, 'Show Getting Started Guide'),
-        showParagraph && React.createElement('p', null, 'Welcome to ReactJS! If you\'re new to React, here\'s how you can get started with building your first app.')
-      ),
-      // Main content
-      React.createElement('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' } },
-        React.createElement('div', { style: { flex: 1 } },
-          React.createElement('h2', null, 'Welcome to our Website'),
-          React.createElement('p', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-        ),
-        React.createElement('div', { style: { flex: 1, textAlign: 'right' } },
-          React.createElement('img', { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcBiBI248rgjtRfFgxc8WapC-w7npSGPi6GnV1_VUMww&s', alt: 'Placeholder Image', style: { maxWidth: '100%', height: 'auto' } })
+          // CSS - Styling the Web section
+          React.createElement('section', { style: { marginBottom: '20px', textAlign: 'center' } },
+            React.createElement('h2', null, 'CSS - Styling the Web'),
+            React.createElement('a', { href: '#css-styling' }, 'Learn More'),
+            React.createElement('p', null, 'CSS enhances the appearance of your web pages. It allows you to style elements, change colors, layouts, and create visually appealing designs.')
+          )
         )
-      )
-    )
-  );
-};
+      );
+    };
 
-  // Function to toggle the visibility of the paragraph
-  const toggleParagraph = () => {
-    setShowParagraph(!showParagraph);
-  };
-
-  return (
-    React.createElement('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' } },
-      // Getting Started section
-      React.createElement('section', { id: 'getting-started', style: { marginBottom: '20px', textAlign: 'center' } },
-        React.createElement('h2', null, 'Getting Started'),
-        React.createElement('button', { onClick: toggleParagraph }, 'Show Getting Started Guide'),
-        showParagraph && React.createElement('p', null, 'Welcome to ReactJS! If you\'re new to React, here\'s how you can get started with building your first app.')
-      ),
-      // Main content
-      React.createElement('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' } },
-        React.createElement('div', { style: { flex: 1 } },
-          React.createElement('h2', null, 'Welcome to our Website'),
-          React.createElement('p', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-        ),
-        React.createElement('div', { style: { flex: 1, textAlign: 'right' } },
-          React.createElement('img', { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcBiBI248rgjtRfFgxc8WapC-w7npSGPi6GnV1_VUMww&s', alt: 'Placeholder Image', style: { maxWidth: '100%', height: 'auto' } })
-        )
-      )
-    )
-  );
-};
     // Footer component
     const Footer = () => {
       return (
