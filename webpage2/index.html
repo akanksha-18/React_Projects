@@ -7,6 +7,35 @@
   <!-- ReactJS CDN links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+  <style>
+    /* CSS for consistent UI design */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1E90FF;
+    }
+    p {
+      color: #333;
+      line-height: 1.5;
+    }
+    a {
+      color: #1E90FF;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div id="root"></div>
@@ -14,29 +43,29 @@
   <script>
     // MainHeading component
     const MainHeading = () => {
-      return React.createElement('h1', { style: { textAlign: 'center', marginTop: '20px', color: '#1E90FF' } }, 'Welcome to Our Website');
+      return React.createElement('h1', null, 'Welcome to Our Website');
     };
 
     // FirstDiv component
     const FirstDiv = () => {
-      return React.createElement('div', { style: { maxWidth: '600px', margin: '0 auto', padding: '20px', backgroundColor: '#FFD700' } },
-        React.createElement('p', { style: { color: '#333' } }, 'This paragraph contains important information about our company. Please read it carefully.')
+      return React.createElement('div', { className: 'container' },
+        React.createElement('p', null, 'This paragraph contains important information about our company. Please read it carefully.')
       );
     };
 
     // SecondDiv component
     const SecondDiv = () => {
-      return React.createElement('div', { style: { maxWidth: '600px', margin: '20px auto', padding: '20px', backgroundColor: '#32CD32' } },
-        React.createElement('p', { style: { color: '#333' } }, 'For more information, visit our ',
-          React.createElement('a', { href: 'https://example.com', style: { color: '#1E90FF', textDecoration: 'underline' } }, 'website'),
+      return React.createElement('div', { className: 'container' },
+        React.createElement('p', null, 'For more information, visit our ',
+          React.createElement('a', { href: 'https://example.com' }, 'website'),
           '.')
       );
     };
 
     // LastDiv component
     const LastDiv = () => {
-      return React.createElement('div', { style: { maxWidth: '600px', margin: '20px auto', padding: '20px', backgroundColor: '#FF6347' } },
-        React.createElement('p', { style: { color: '#333' } }, 'Contact us at support@example.com for any inquiries or assistance.')
+      return React.createElement('div', { className: 'container' },
+        React.createElement('p', null, 'Contact us at support@example.com for any inquiries or assistance.')
       );
     };
 
